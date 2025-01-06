@@ -9,6 +9,7 @@ import cartRoutes from "./routes/cart.route.js";
 import couponRoutes from "./routes/coupon.route.js";
 import paymentRoutes from "./routes/payment.route.js";
 import productRoutes from "./routes/product.route.js";
+import cors from "cors";
 
 import { connectDB } from './lib/db.js';
 
@@ -21,6 +22,7 @@ const __dirname = path.resolve();
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors({ origin: "*" }));
 
 app.use("/api/analytics", analyticsRoutes);
 app.use("/api/auth", authRoutes);
