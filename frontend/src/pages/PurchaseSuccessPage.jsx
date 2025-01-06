@@ -18,7 +18,7 @@ const PurchaseSuccessPage = () => {
         });
         clearCart();
       } catch (error) {
-        console.log(error);
+        setError(error.message);
       } finally {
         setIsProcessing(false);
       }
@@ -42,8 +42,8 @@ const PurchaseSuccessPage = () => {
   return (
     <div className="h-screen flex items-center justify-center px-4">
       <Confetti
-        width={window.innerWidth}
-        height={window.innerHeight}
+        width={typeof window !== "undefined" ? window.innerWidth : 0}
+        height={typeof window !== "undefined" ? window.innerHeight : 0}
         gravity={0.1}
         style={{ zIndex: 99 }}
         numberOfPieces={700}

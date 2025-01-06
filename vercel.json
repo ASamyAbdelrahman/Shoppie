@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "rewrites": [
-    { "source": "/login", "destination": "/frontend/pages/login.js" },
-    { "source": "/api/(.*)", "destination": "/backend/api/$1" },
-    { "source": "/(.*)", "destination": "/frontend/pages/index.js" }
+  "builds": [{ "src": "*.js", "use": "@vercel/node" }],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
   ]
 }

@@ -7,9 +7,9 @@ const categories = [
   "jeans",
   "t-shirts",
   "shoes",
-  "glasses",
+  "hats",
   "jackets",
-  "suits",
+  "shorts",
   "bags",
 ];
 
