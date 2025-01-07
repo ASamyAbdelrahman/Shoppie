@@ -72,3 +72,5 @@ The project follows a clean and modular structure for scalability:
   ├── .env                # Environment variables (secrets, salts, JWT secret)
   └── server.js           # Entry point for the application
 ```
+## Contributing
+Feel free to fork the repository and submit pull requests. Contributions are welcome to improve the platform and add more features.
